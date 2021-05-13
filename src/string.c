@@ -258,6 +258,14 @@ wchar_t * wcschr ( const wchar_t *str, wchar_t c ) {
 	return NULL;
 }
 
+char *strchr(const char *str, char c) {
+    for ( ; *str ; str++ ) {
+		if ( *str == c )
+			return ( ( char * )str );
+	}
+	return NULL;
+}
+
 /**
  * Check to see if character is a space
  *
