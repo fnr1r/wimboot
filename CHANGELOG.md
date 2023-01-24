@@ -3,6 +3,8 @@ Changelog
 
 ## [Unreleased]
 
+- Fix building with GCC 12
+
 ## [v2.7.3] 2021-04-30
 
 - Fix extraction of embedded `bootmgr.exe` from Windows 10 versions of
