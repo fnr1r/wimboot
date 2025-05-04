@@ -450,10 +450,10 @@ int wim_path ( struct vdisk_file *file, struct wim_header *header,
 		return rc;
 
 	/* Get root directory offset */
-    if (security.len > 0)
-    	direntry->subdir = ( ( security.len + sizeof ( uint64_t ) - 1 ) & ~( sizeof ( uint64_t ) - 1 ) );
-    else
-        direntry->subdir = security.len + 8;
+	if (security.len > 0)
+		direntry->subdir = ( ( security.len + sizeof ( uint64_t ) - 1 ) & ~( sizeof ( uint64_t ) - 1 ) );
+	else
+		direntry->subdir = security.len + 8;
 
 	/* Find directory entry */
 	name = memcpy ( path_copy, path, sizeof ( path_copy ) );
